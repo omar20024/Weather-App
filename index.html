@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- links css -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+      <div class="container">
+        <a class="navbar-brand d-flex gap-2 align-items-center" href="#">
+          <img class="w-25" src="./imag/logo@2x.png" alt=""/>
+          <h1 class="h5">
+            weather
+            <small class="d-block">tagline goes here</small>
+          </h1>
+        </a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active nav-border" href="#" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="pt-4">
+      <div class="container py-5">
+        <input
+          type="text"
+          name="searchCity"
+          id="searchLocationInput"
+          placeholder="Write Your Location..."
+          class="w-100 mx-auto form-control rounded-5 text-white"
+        />
+      </div>
+
+
+
+
+
+      <div class="row g-4 mx-3">
+
+        <!-- ========== Today Section ========== -->
+        <div class="card col-md-4 bg-sec-color m-0 rounded-4">
+          <div
+            class="item d-flex justify-content-between py-2 px-3 bg-main-color text-white"
+            id="todayDate"
+          >
+            <p id="dayName" class="my-auto"></p>
+            <span>
+              <span id="dayNumber" class="my-auto"></span>
+              <span id="todayMonthOfCity" class="my-auto"></span>
+            </span>
+          </div>
+          <div class="item px-3 py-3 pt-5 text-white" id="today">
+            <p id="todayLocation" class="fs-4"></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fs-1 fw-bolder">
+                <span id="todayTemp"></span>
+                <span><sup>o</sup> C</span>
+              </span>
+              <img id="todayConditionImg" src="" alt="Weather Image" />
+            </div>
+            <p id="todayText" class="fs-6 text-color"></p>
+          </div>
+          <div class="item d-flex text-light p-3">
+            <div class="d-flex me-3">
+              <img
+                src="./imag/icon-umberella@2x.png"
+                class="footer-icons me-2"
+                alt="weather Image"
+              />
+              <p id="todayHumidity"></p>
+            </div>
+            <div class="d-flex me-3">
+              <img
+                src="./imag/icon-wind@2x.png"
+                class="footer-icons mx-2"
+                alt="weather Image"
+              />
+              <p id="todayWind"></p>
+            </div>
+            <div class="d-flex">
+              <img
+                src="./imag/icon-compass@2x.png"
+                class="footer-icons mx-2"
+                alt="weather Image"
+              />
+              <p id="todayWindDirection"></p>
+            </div>
+          </div>
+      </div>
+
+          <!-- ========== Tomorrow Section ========== -->
+       <div class="card col-md-4 m-0 bg-main-color">
+          <div class="py-2 text-center bg-sec-color text-light">
+            <p id="nextDayName" class="my-auto"></p>
+          </div>
+          <div class="item text-white p-3 text-center pt-5">
+            <img id="nextConditionImg" src="" alt="weather img" />
+            <h3>
+              <span id="nextMaxTemp"></span>
+              <span><sup>o</sup> C</span>
+            </h3>
+            <h5 class="text">
+              <span id="nextMinTemp" class="nextMinTemp text-white-50"></span>
+              <span class="text-white-50"><sup>o</sup> C</span>
+            </h5>
+            <p
+              id="nextConditionText"
+              class="nextConditionText fs-6 text-color"
+            ></p>
+          </div>
+        </div>
+
+         <!-- ========== After Tomorrow Section ========== -->
+
+        <div class="card col-md-4 m-0 bg-sec-color rounded-4">
+          <div
+            class="item py-2 text-center px-3 bg-main-color text-white rounded-end"
+          >
+            <p id="afterNextDayName" class="after-nextDayName my-auto"></p>
+          </div>
+          <div class="item text-white p-3 text-center pt-5">
+            <img id="afterNextConditionImg" src="" alt="weather image" />
+            <h3>
+              <span id="afterNextMaxTemp"></span>
+              <span><sup>o</sup> C</span>
+            </h3>
+            <h5 class="text">
+              <span
+                id="afterNextMinTemp"
+                class="after-nextMinTemp text-white-50"
+              ></span>
+              <span class="text-white-50"><sup>o</sup> C</span>
+            </h5>
+            <p
+              id="afterNextConditionText"
+              class="after-nextConditionText fs-6 text-color"
+            ></p>
+          </div>
+        </div>
+
+
+    </section>  
+    
+
+    <!--  links js --> 
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
